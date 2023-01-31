@@ -21,12 +21,16 @@ def clean_input
   gets.chomp.strip.downcase
 end
 
+def print_categories(round)
+  round.deck.get_all_categories.each do |category|
+    puts "#{category} - #{round.percent_correct_by_category(category).to_i}% correct"
+  end
+end
+
 def print_score(round)
   puts "*** Game Over! ***"
   puts "You had #{round.number_correct} correct guesses out of #{round.deck.count} for a total score of #{round.percent_correct.to_i}%."
-  puts "People - #{round.percent_correct_by_category(:People).to_i}% correct"
-  puts "Places - #{round.percent_correct_by_category(:Places).to_i}% correct"
-  puts "SkateEvents - #{round.percent_correct_by_category(:SkateEvents).to_i}% correct"
+  print_categories(round)
 end
 
 def start(deck)
