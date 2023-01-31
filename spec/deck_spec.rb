@@ -34,4 +34,10 @@ RSpec.describe Deck do
     expect(deck.cards_in_category(:SkateEvents)).to eq([card_3, card_4])
     expect(deck.cards_in_category(:Business)).to eq([])
   end
+
+  it 'can return a collection of categories' do
+    deck = Deck.new(cards)
+
+    expect(deck.get_all_categories).to eq([:People, :Places, :SkateEvents])
+  end
 end
