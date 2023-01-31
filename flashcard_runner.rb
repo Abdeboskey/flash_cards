@@ -17,6 +17,10 @@ def print_question(round)
   puts "Question: #{round.current_card.question}"
 end
 
+def clean_input
+  gets.chomp.strip.downcase
+end
+
 def print_score(round)
   puts "*** Game Over! ***"
   puts "You had #{round.number_correct} correct guesses out of #{round.deck.count} for a total score of #{round.percent_correct.to_i}%."
@@ -32,8 +36,8 @@ def start(deck)
 
   while round.turns.length < deck.count do
     print_question(round)
-    guess = gets.chomp
-    round.take_turn(guess.strip)
+    guess = clean_input
+    round.take_turn(guess)
     puts round.turns.last.feedback 
   end
 
