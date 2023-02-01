@@ -1,16 +1,19 @@
 require './lib/card'
 require './lib/deck'
 require './lib/round'
+require './lib/card_generator'
 
-card_1 = Card.new("Who is my creator?", "Rontron", :People)
-card_2 = Card.new("Who am I?", "NEPTR", :People)
-card_3 = Card.new("Who says 'I'm a big baby that can dance like a man'?", "Finn", :People)
-card_4 = Card.new("Where is the dopest new place to train for outdoor skating?", "Aurora Reservoir", :Places)
-card_5 = Card.new("Where does Gamelan Gong Kebyar come from?", "Bali", :Places)
-card_6 = Card.new("How many hours is the Miami UltraSkate", "24", :SkateEvents)
-card_7 = Card.new("Where does the A2A roadskate begin?", "Athens, GA", :SkateEvents)
+# card_1 = Card.new("Who is my creator?", "Rontron", :People)
+# card_2 = Card.new("Who am I?", "NEPTR", :People)
+# card_3 = Card.new("Who says 'I'm a big baby that can dance like a man'?", "Finn", :People)
+# card_4 = Card.new("Where is the dopest new place to train for outdoor skating?", "Aurora Reservoir", :Places)
+# card_5 = Card.new("Where does Gamelan Gong Kebyar come from?", "Bali", :Places)
+# card_6 = Card.new("How many hours is the Miami UltraSkate", "24", :SkateEvents)
+# card_7 = Card.new("Where does the A2A roadskate begin?", "Athens, GA", :SkateEvents)
+# 
+# deck = Deck.new([card_1, card_2, card_3, card_4, card_5, card_6, card_7])
 
-deck = Deck.new([card_1, card_2, card_3, card_4, card_5, card_6, card_7])
+deck = Deck.new(CardGenerator.new("vitals_tables.txt").cards)
 
 def print_question(round)
   puts "This is card number #{round.turns.length + 1} out of #{round.deck.count}."
