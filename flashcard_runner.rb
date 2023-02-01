@@ -10,10 +10,11 @@ require './lib/card_generator'
 # card_5 = Card.new("Where does Gamelan Gong Kebyar come from?", "Bali", :Places)
 # card_6 = Card.new("How many hours is the Miami UltraSkate", "24", :SkateEvents)
 # card_7 = Card.new("Where does the A2A roadskate begin?", "Athens, GA", :SkateEvents)
-# 
+ 
 # deck = Deck.new([card_1, card_2, card_3, card_4, card_5, card_6, card_7])
 
-deck = Deck.new(CardGenerator.new("vitals_tables.txt").cards.shuffle)
+cards = CardGenerator.new("vitals_tables.txt").cards
+deck = Deck.new(cards.shuffle)
 
 def print_categories(round)
   round.deck.get_all_categories.each do |category|
@@ -27,7 +28,7 @@ def print_question(round)
 end
 
 def clean_input
-  gets.chomp.strip.downcase
+  gets.chomp.strip
 end
 
 def print_score_by_category(round)

@@ -20,8 +20,8 @@ RSpec.describe CardGenerator do
     filename = 'vitals_tables.txt'
     card_generator = CardGenerator.new(filename)
 
-    expect(card_generator.cards[0].question).to eq("What is the typical breathing rate for an adult?")
+    expect(card_generator.cards[0].question).to eq("What is a normal breathing rate for an adult?")
     expect(card_generator.cards[0].answer).to eq("12-20")
-    expect(card_generator.cards[0].category).to eq("Breathing Rate")
+    expect(card_generator.cards[0].category).to eq("Breathing Rates")
   end
 end
