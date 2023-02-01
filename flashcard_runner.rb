@@ -13,7 +13,13 @@ require './lib/card_generator'
 # 
 # deck = Deck.new([card_1, card_2, card_3, card_4, card_5, card_6, card_7])
 
-deck = Deck.new(CardGenerator.new("vitals_tables.txt").cards)
+deck = Deck.new(CardGenerator.new("vitals_tables.txt").cards.shuffle)
+
+def print_categories(round)
+  round.deck.get_all_categories.each do |category|
+    puts "- #{category}"
+  end
+end
 
 def print_question(round)
   puts "This is card number #{round.turns.length + 1} out of #{round.deck.count}."
@@ -24,7 +30,7 @@ def clean_input
   gets.chomp.strip.downcase
 end
 
-def print_categories(round)
+def print_score_by_category(round)
   round.deck.get_all_categories.each do |category|
     puts "#{category} - #{round.percent_correct_by_category(category).to_i}% correct"
   end
@@ -33,12 +39,14 @@ end
 def print_score(round)
   puts "*** Game Over! ***"
   puts "You had #{round.number_correct} correct guesses out of #{round.deck.count} for a total score of #{round.percent_correct.to_i}%."
-  print_categories(round)
+  print_score_by_category(round)
 end
 
 def start(deck)
   round = Round.new(deck)
   puts "Welcome! You're playing with #{round.deck.count} cards" 
+  puts "The categories are:"
+  print_categories(round)
   puts "-----------------------------------------------"
 
   while round.turns.length < deck.count do
