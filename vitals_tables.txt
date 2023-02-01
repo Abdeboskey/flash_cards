@@ -1,7 +1,14 @@
-What is the typical breathing rate for an adult?,12-20,Breathing Rate
-What is the typical breathing rate for an adolescent (12-15 years old)?,12-20,Breathing Rate
-What is the typical breathing rate for a school-age child (6-11 years old)?,18-25,Breathing Rate
-What is the typical breathing rate for a preschooler (3-5 years old)?,20-28,Breathing Rate
-What is the typical breathing rate for a toddler (1-2 years old)?,22-37,Breathing Rate
-What is the typical breathing rate for an infant (1 month-12 months old)?,30-53,Breathing Rate
-What is the typical breathing rate for a neonate (birth-1 month old)?,40-60,Breathing Rate
+What is a normal breathing rate for an adult?,12-20,Breathing Rates
+What is a normal breathing rate for an adolescent (12-15 years old)?,12-20,Breathing Rates
+What is a normal breathing rate for a school-age child (6-11 years old)?,18-25,Breathing Rates
+What is a normal breathing rate for a preschooler (3-5 years old)?,20-28,Breathing Rates
+What is a normal breathing rate for a toddler (1-2 years old)?,22-37,Breathing Rates
+What is a normal breathing rate for an infant (1 month-12 months old)?,30-53,Breathing Rates
+What is a normal breathing rate for a neonate (birth-1 month old)?,40-60,Breathing Rates
+What is a normal pulse rate for an adult?,60-100,Pulse Rates
+What is a normal pulse rate for an adolescent (12-15 years old)?,60-100,Pulse Rates
+What is a normal pulse rate for a school-age child (6-11 years old)?,75-118,Pulse Rates
+What is a normal pulse rate for a preschooler (3-5 years old)?,80-120,Pulse Rates
+What is a normal pulse rate for a toddler (1-2 years old)?,98-140,Pulse Rates
+What is a normal pulse rate for an infant (1 month-12 months old)?,100-180,Pulse Rates
+What is a normal pulse rate for a neonate (birth-1 month old)?,100-205,Pulse Rates
